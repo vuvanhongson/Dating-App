@@ -1,0 +1,23 @@
+com/example/tinder/home/HomeFragment.java
+ com.example.tinder.home.HomeFragment
+com/example/tinder/DataBindingTriggerClass.java
+ com.example.tinder.DataBindingTriggerClass
+com/example/tinder/databinding/FragmentHomeBinding.java
+ com.example.tinder.databinding.FragmentHomeBinding
+com/example/tinder/BuildConfig.java
+ com.example.tinder.BuildConfig
+com/example/tinder/databinding/FragmentNotificationBinding.java
+ com.example.tinder.databinding.FragmentNotificationBinding
+com/example/tinder/MainActivity.java
+ com.example.tinder.MainActivity
+ com.example.tinder.MainActivity$1
+ com.example.tinder.MainActivity$2
+ com.example.tinder.MainActivity$3
+com/example/tinder/databinding/ActivityMainBinding.java
+ com.example.tinder.databinding.ActivityMainBinding
+com/example/tinder/favoutite/FavouriteFragment.java
+ com.example.tinder.favoutite.FavouriteFragment
+com/example/tinder/databinding/FragmentFavouriteBinding.java
+ com.example.tinder.databinding.FragmentFavouriteBinding
+com/example/tinder/notification/NotificationFragment.java
+ com.example.tinder.notification.NotificationFragment

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_notification.xml",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\fragment_notification.xml"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_favourite.xml",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\fragment_favourite.xml"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    }
+]
