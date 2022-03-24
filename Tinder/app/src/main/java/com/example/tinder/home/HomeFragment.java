@@ -53,7 +53,7 @@ public class HomeFragment extends Fragment {
     private void loadProfile()
     {
         homeViewModel = new HomeViewModel();
-        for(int i = 0; i <= 2; i++)
+        for(int i = 0; i <= 20; i++)
         {
             Log.d("MainActivity", "Load i:" + i);
             Result p = new Result();
