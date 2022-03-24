@@ -4,6 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fe2a962fd23a8ce07a88d7b99e75bcb1/jetified-Koloda-Android-v0.0.2-alpha/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fe2a962fd23a8ce07a88d7b99e75bcb1/jetified-Koloda-Android-v0.0.2-alpha/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fe2a962fd23a8ce07a88d7b99e75bcb1/jetified-Koloda-Android-v0.0.2-alpha/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2d591f1df53164d79dac668804f96a7f/jetified-Koloda-Android-v0.0.2-alpha/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2d591f1df53164d79dac668804f96a7f/jetified-Koloda-Android-v0.0.2-alpha/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2d591f1df53164d79dac668804f96a7f/jetified-Koloda-Android-v0.0.2-alpha/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

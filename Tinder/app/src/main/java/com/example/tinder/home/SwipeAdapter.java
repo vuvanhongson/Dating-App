@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.tinder.R;
+import com.example.tinder.data.model.Result;
 import com.example.tinder.data.model.SOProfileResponse;
 
 import java.util.List;
@@ -15,9 +16,9 @@ import java.util.List;
 public class SwipeAdapter extends BaseAdapter {
 
     private Context context;
-    private List<SOProfileResponse> list;
+    private List<Result> list;
 
-    public SwipeAdapter(Context context, List<SOProfileResponse> list) {
+    public SwipeAdapter(Context context, List<Result> list) {
         this.context = context;
         this.list = list;
     }
@@ -50,8 +51,8 @@ public class SwipeAdapter extends BaseAdapter {
         }
         TextView tvten = view.findViewById(R.id.tvten);
 
-        SOProfileResponse p = list.get(position);
-        tvten.setText(p.bo);
+        Result p = list.get(position);
+//        tvten.setText(p.getUser().getName().getFirst());
 
 
 

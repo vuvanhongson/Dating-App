@@ -4,6 +4,9 @@ com/example/tinder/BuildConfig.java
  com.example.tinder.BuildConfig
 com/example/tinder/databinding/FragmentNotificationBinding.java
  com.example.tinder.databinding.FragmentNotificationBinding
+com/example/tinder/home/HomeViewModel.java
+ com.example.tinder.home.HomeViewModel
+ com.example.tinder.home.HomeViewModel$1
 com/example/tinder/home/SwipeAdapter.java
  com.example.tinder.home.SwipeAdapter
 com/example/tinder/data/model/Name.java
@@ -32,6 +35,8 @@ com/example/tinder/data/model/User.java
  com.example.tinder.data.model.User
 com/example/tinder/data/remote/ApiUtils.java
  com.example.tinder.data.remote.ApiUtils
+com/example/tinder/MainViewModel.java
+ com.example.tinder.MainViewModel
 com/example/tinder/MainActivity.java
  com.example.tinder.MainActivity
  com.example.tinder.MainActivity$1

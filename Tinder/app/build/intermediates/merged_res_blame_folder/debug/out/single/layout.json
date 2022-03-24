@@ -1,22 +1,22 @@
 [
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\PIXAR-HEAD\\Desktop\\Dating-App\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_favourite.xml",
+        "source": "C:\\Users\\PIXAR-HEAD\\Desktop\\Dating-App\\Tinder\\app\\src\\main\\res\\layout\\fragment_favourite.xml"
     },
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_notification.xml",
-        "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\fragment_notification.xml"
+        "merged": "C:\\Users\\PIXAR-HEAD\\Desktop\\Dating-App\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\PIXAR-HEAD\\Desktop\\Dating-App\\Tinder\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item_swipe_card.xml",
-        "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\layout_item_swipe_card.xml"
+        "merged": "C:\\Users\\PIXAR-HEAD\\Desktop\\Dating-App\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_notification.xml",
+        "source": "C:\\Users\\PIXAR-HEAD\\Desktop\\Dating-App\\Tinder\\app\\src\\main\\res\\layout\\fragment_notification.xml"
     },
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_favourite.xml",
-        "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\fragment_favourite.xml"
+        "merged": "C:\\Users\\PIXAR-HEAD\\Desktop\\Dating-App\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\PIXAR-HEAD\\Desktop\\Dating-App\\Tinder\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
-        "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\fragment_home.xml"
+        "merged": "C:\\Users\\PIXAR-HEAD\\Desktop\\Dating-App\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item_swipe_card.xml",
+        "source": "C:\\Users\\PIXAR-HEAD\\Desktop\\Dating-App\\Tinder\\app\\src\\main\\res\\layout\\layout_item_swipe_card.xml"
     }
 ]

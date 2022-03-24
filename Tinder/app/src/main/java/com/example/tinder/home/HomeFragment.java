@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 
 import com.example.tinder.MainActivity;
 import com.example.tinder.R;
+import com.example.tinder.data.model.Result;
 import com.example.tinder.data.model.SOProfileResponse;
 import com.example.tinder.databinding.ActivityMainBinding;
 import com.example.tinder.databinding.FragmentHomeBinding;
@@ -28,7 +30,7 @@ public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
     private SwipeAdapter adapter;
     private List<Integer> list;
-    List<SOProfileResponse> pro = new ArrayList<>();
+    List<Result> pro = new ArrayList<>();
     Koloda koloda;
 
 
@@ -43,20 +45,25 @@ public class HomeFragment extends Fragment {
 //        list = new ArrayList<>();
 //        adapter = new SwipeAdapter(getContext(), list);
 //        koloda.setAdapter(adapter);
-
+        Log.d("MainActivity", "onCreateView ");
+        loadProfile();
         return  root;
     }
 
     private void loadProfile()
     {
-        for(int i = 1; i > 20; i++)
+        homeViewModel = new HomeViewModel();
+        for(int i = 0; i <= 2; i++)
         {
-            SOProfileResponse p = new SOProfileResponse();
+            Log.d("MainActivity", "Load i:" + i);
+            Result p = new Result();
             p = homeViewModel.getProfileResponse();
             pro.add(p);
-            adapter = new SwipeAdapter(getContext(), pro);
-            koloda.setAdapter(adapter);
         }
+
+
+        adapter = new SwipeAdapter(getActivity(), pro);
+        koloda.setAdapter(adapter);
 
     }
 

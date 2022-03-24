@@ -27,6 +27,7 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim movemargic
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
@@ -2321,6 +2322,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv_count
+id tvten
 id unchecked
 id uniform
 id unlabeled
