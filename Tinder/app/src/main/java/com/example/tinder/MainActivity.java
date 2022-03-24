@@ -5,18 +5,30 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.tinder.data.model.SOProfileResponse;
 import com.example.tinder.databinding.ActivityMainBinding;
 import com.example.tinder.favoutite.FavouriteFragment;
 import com.example.tinder.home.HomeFragment;
+import com.example.tinder.home.SwipeAdapter;
 import com.example.tinder.notification.NotificationFragment;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
+    private MainViewModel mainViewModel;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         binding.bottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.ic_baseline_notifications_24));
         binding.bottomNavigation.add(new MeowBottomNavigation.Model(3, R.drawable.ic_baseline_favorite_24));
         controllayout();
+
+
     }
 
     private void controllayout()
@@ -90,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
         .replace(R.id.frame_layout, fragment)
         .commit();
     }
+
 
 
 }

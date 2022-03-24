@@ -4,48 +4,32 @@
         "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_home_24.png"
     },
     {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_xanhla_01.jpg.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\bg_xanhla_01.jpg"
+    },
+    {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "D:\\Tinder\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_favorite_24.png.flat",
-        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_favorite_24.png"
-    },
-    {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Tinder\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_phone_green.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\phone_green.png"
     },
     {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "D:\\Tinder\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
-        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mao_green.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\mao_green.png"
     },
     {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_favourite.xml.flat",
         "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\fragment_favourite.xml"
     },
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
-    },
-    {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "D:\\Tinder\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
-        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
-    },
-    {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_home_24.png.flat",
-        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_home_24.png"
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lock_grey.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\lock_grey.png"
     },
     {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -58,6 +42,134 @@
     {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_notifications_24.png.flat",
         "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_notifications_24.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_notifications_24.png.flat",
+        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_notifications_24.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_notifications_24.png.flat",
+        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_notifications_24.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lock_green.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\lock_green.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_corress.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\btn_corress.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_canlendar_grey.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\canlendar_grey.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_right.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\btn_right.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_avatar.jpg.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\avatar.jpg"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_favorite_24.png.flat",
+        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_favorite_24.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_map_pink.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\map_pink.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_home_24.xml.flat",
+        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_home_24.xml"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_incorress.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\btn_incorress.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_phone_pink.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\phone_pink.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_xanhla_02.jpg.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\bg_xanhla_02.jpg"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_notifications_24.xml.flat",
+        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_notifications_24.xml"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_notification.xml.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\fragment_notification.xml"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_margic_ball_pink.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\margic_ball_pink.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_favorite_24.png.flat",
+        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_favorite_24.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_favorite_24.png.flat",
+        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_favorite_24.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_calendar_green.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\calendar_green.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_scroll_bar_horizon_green.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\scroll_bar_horizon_green.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_phone_grey.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\phone_grey.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_home_24.png.flat",
+        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_home_24.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_map_grey.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\map_grey.png"
     },
     {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
@@ -76,14 +188,6 @@
         "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_home_24.png"
     },
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_notifications_24.png.flat",
-        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_notifications_24.png"
-    },
-    {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_notifications_24.png.flat",
-        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_notifications_24.png"
-    },
-    {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
         "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
     },
@@ -94,6 +198,10 @@
     {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_favorite_24.png.flat",
         "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_favorite_24.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_trang_radius.xml.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\bg_trang_radius.xml"
     },
     {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
@@ -108,68 +216,76 @@
         "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_home_24.png"
     },
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_favorite_24.png.flat",
-        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_favorite_24.png"
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_left.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\btn_left.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lock_icon_pink.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\lock_icon_pink.png"
     },
     {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_home_24.xml.flat",
-        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_home_24.xml"
-    },
-    {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_home_24.png.flat",
         "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_home_24.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_like_green.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\btn_like_green.png"
     },
     {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "D:\\Tinder\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_notifications_24.xml.flat",
-        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_notifications_24.xml"
-    },
-    {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
         "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_scroll_bar_horizontal_green.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\scroll_bar_horizontal_green.png"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_margic_ball_green.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\margic_ball_green.png"
     },
     {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_notifications_24.png.flat",
         "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_notifications_24.png"
     },
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Tinder\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_favorite_24.png.flat",
         "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_favorite_24.png"
     },
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Tinder\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_scroll_bar_horizon_pink.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\scroll_bar_horizon_pink.png"
     },
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_notification.xml.flat",
-        "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\fragment_notification.xml"
-    },
-    {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
-        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_like.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\btn_like.png"
     },
     {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_favorite_24.xml.flat",
         "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_favorite_24.xml"
     },
     {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_calendar_pink.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\calendar_pink.png"
+    },
+    {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "D:\\Tinder\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_favorite_24.png.flat",
-        "source": "D:\\Tinder\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_favorite_24.png"
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_item_swipe_card.xml.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\layout_item_swipe_card.xml"
+    },
+    {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_margic_ball_grey.png.flat",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\drawable\\margic_ball_grey.png"
     },
     {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",

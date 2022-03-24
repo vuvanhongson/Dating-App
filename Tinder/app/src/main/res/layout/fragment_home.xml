@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".home.HomeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
 
-    <com.yalantis.library.Koloda
-        android:id="@+id/koloda"
+    </data>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:koloda_card_layout="@layout/layout_item_swipe_card" />
+        tools:context=".home.HomeFragment">
 
-</FrameLayout>
+
+        <com.yalantis.library.Koloda
+            android:id="@+id/koloda"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:koloda_card_layout="@layout/layout_item_swipe_card" />
+
+    </FrameLayout>
+</layout>

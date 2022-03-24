@@ -8,6 +8,10 @@
         "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\fragment_notification.xml"
     },
     {
+        "merged": "D:\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item_swipe_card.xml",
+        "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\layout_item_swipe_card.xml"
+    },
+    {
         "merged": "D:\\Tinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_favourite.xml",
         "source": "D:\\Tinder\\app\\src\\main\\res\\layout\\fragment_favourite.xml"
     },
