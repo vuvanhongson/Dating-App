@@ -50,6 +50,15 @@ public class HomeViewModel extends ViewModel {
 
             }
         });
+
+        try{
+            Log.d("MainActivity9", "Thí is: " + result.getUser().getName().getFirst());
+        }
+        catch (Exception e)
+        {
+
+        }
+
     }
 
     public Result getProfileResponse() {

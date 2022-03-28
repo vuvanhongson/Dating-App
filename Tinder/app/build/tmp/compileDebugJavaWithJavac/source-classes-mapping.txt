@@ -7,8 +7,8 @@ com/example/tinder/databinding/FragmentNotificationBinding.java
 com/example/tinder/home/HomeViewModel.java
  com.example.tinder.home.HomeViewModel
  com.example.tinder.home.HomeViewModel$1
-com/example/tinder/home/SwipeAdapter.java
- com.example.tinder.home.SwipeAdapter
+com/example/tinder/data/remote/SOService.java
+ com.example.tinder.data.remote.SOService
 com/example/tinder/data/model/Name.java
  com.example.tinder.data.model.Name
 com/example/tinder/databinding/ActivityMainBinding.java
@@ -37,12 +37,18 @@ com/example/tinder/data/remote/ApiUtils.java
  com.example.tinder.data.remote.ApiUtils
 com/example/tinder/MainViewModel.java
  com.example.tinder.MainViewModel
-com/example/tinder/data/remote/SOService.java
- com.example.tinder.data.remote.SOService
-com/example/tinder/home/HomeFragment.java
- com.example.tinder.home.HomeFragment
 com/example/tinder/MainActivity.java
  com.example.tinder.MainActivity
  com.example.tinder.MainActivity$1
  com.example.tinder.MainActivity$2
  com.example.tinder.MainActivity$3
+com/example/tinder/home/HomeFragment.java
+ com.example.tinder.home.HomeFragment
+com/example/tinder/home/SwipeAdapter.java
+ com.example.tinder.home.SwipeAdapter
+ com.example.tinder.home.SwipeAdapter$1
+ com.example.tinder.home.SwipeAdapter$2
+ com.example.tinder.home.SwipeAdapter$3
+ com.example.tinder.home.SwipeAdapter$4
+ com.example.tinder.home.SwipeAdapter$5
+ com.example.tinder.home.SwipeAdapter$6

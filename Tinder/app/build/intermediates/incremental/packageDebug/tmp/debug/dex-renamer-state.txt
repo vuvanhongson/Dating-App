@@ -1,4 +1,4 @@
-#Fri Mar 25 00:06:01 ICT 2022
-base.0=C\:\\Users\\PIXAR-HEAD\\Desktop\\Dating-App\\Tinder\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-renamed.0=classes.dex
+#Mon Mar 28 18:02:06 ICT 2022
+base.0=D\:\\Tinder\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
+renamed.0=classes.dex

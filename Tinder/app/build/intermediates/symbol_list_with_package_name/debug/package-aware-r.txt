@@ -1964,6 +1964,11 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnCalendar
+id btnLock
+id btnMagicBall
+id btnMap
+id btnPhone
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2084,6 +2089,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imgScrollBar
 id imgUser
 id immediateStop
 id included
@@ -2321,6 +2327,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvTitle
 id tv_count
 id tvten
 id unchecked
