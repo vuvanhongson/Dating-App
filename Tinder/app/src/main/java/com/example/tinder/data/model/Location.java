@@ -50,4 +50,13 @@ public class Location {
             this.zip = zip;
         }
 
+    @Override
+    public String toString() {
+        return "Location{" +
+                "street='" + street + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
+                '}';
     }
+}

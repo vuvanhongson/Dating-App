@@ -2,4 +2,5 @@
     <string name="app_name">Tinder</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fristScreensContent">Tìm kiếm bạn bè dễ dàng với Tinder! Cùng kết nối chia sẻ yêu thương.</string>
 </resources>

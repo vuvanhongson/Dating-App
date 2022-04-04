@@ -73,15 +73,17 @@
             android:id="@+id/tvten"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="106/3/5 Pham Van Chieu"
-            android:textSize="26dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="106/3/5 Pham Van Chieu"
+            android:textColor="@color/black"
+            android:textSize="26dp"
+            android:textStyle="bold" />
         <ImageView
+            android:textAlignment="center"
             android:id="@+id/imgScrollBar"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="10dp"
             android:layout_width="70dp"
             android:layout_height="9dp"
             android:layout_gravity="center_horizontal"
@@ -137,9 +139,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="15dp">
 
             <ImageView
+                android:id="@+id/btnLeft"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_margin="15dp"
@@ -154,6 +157,7 @@
                 android:src="@drawable/btn_like_green"/>
 
             <ImageView
+                android:id="@+id/btnRight"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_margin="15dp"

@@ -183,4 +183,25 @@ public class User {
             this.picture = picture;
         }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "gender='" + gender + '\'' +
+                ", name=" + name +
+                ", location=" + location +
+                ", email='" + email + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", salt='" + salt + '\'' +
+                ", md5='" + md5 + '\'' +
+                ", sha1='" + sha1 + '\'' +
+                ", sha256='" + sha256 + '\'' +
+                ", registered='" + registered + '\'' +
+                ", dob='" + dob + '\'' +
+                ", phone='" + phone + '\'' +
+                ", cell='" + cell + '\'' +
+                ", ssn='" + ssn + '\'' +
+                ", picture='" + picture + '\'' +
+                '}';
     }
+}

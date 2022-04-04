@@ -1,66 +1,132 @@
 package com.example.tinder.notification;
 
+import android.app.AppComponentFactory;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDialogFragment;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.example.tinder.R;
+import com.example.tinder.data.model.Result;
+import com.example.tinder.home.HomeViewModel;
+import com.example.tinder.home.SwipeAdapter;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link NotificationFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class NotificationFragment extends Fragment {
+import java.util.List;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+import me.relex.circleindicator.CircleIndicator;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+import static com.example.tinder.home.HomeFragment.koloda;
+
+
+public class NotificationFragment extends AppCompatDialogFragment {
+
+    private TextView tvSkip;
+    private RelativeLayout relativeLayoutBottom;
+    private ViewPager viewPager;
+    private LinearLayout linearLayoutNext;
+    private CircleIndicator circleIndicator;
+    private ViewPageAdapter viewPageAdapter;
 
     public NotificationFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment NotificationFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static NotificationFragment newInstance(String param1, String param2) {
-        NotificationFragment fragment = new NotificationFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notification, container, false);
+        View root = inflater.inflate(R.layout.fragment_notification, container, false);// Inflate the layout for this fragment
+
+//        profile.clear();
+        HomeViewModel homeViewModel = new HomeViewModel();
+        List<Result> profile = homeViewModel.getProfileResponse();
+        Log.d("MainActivity8", "Length Pro: " + profile.size());
+        Log.e("abc", homeViewModel.getProfileResponse().toString());
+
+        viewPager = root.findViewById(R.id.viewPager);
+
+        tvSkip = root.findViewById(R.id.tvSkip);
+        relativeLayoutBottom = root.findViewById(R.id.relativeLayoutBottom);
+        linearLayoutNext = root.findViewById(R.id.layoutNext);
+        circleIndicator = root.findViewById(R.id.circle_indicartor);
+
+        tvSkip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewPager.setCurrentItem(2);
+            }
+        });
+
+
+        linearLayoutNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(viewPager.getCurrentItem() < 2)
+                    viewPager.setCurrentItem( viewPager.getCurrentItem() + 1);
+
+            }
+        });
+        initIU(root);
+
+        viewPageAdapter = new ViewPageAdapter(getFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+
+        viewPager.setAdapter(viewPageAdapter);
+
+        circleIndicator.setViewPager(viewPager);
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if(position == 2)
+                {
+                    tvSkip.setVisibility(View.GONE);
+                    relativeLayoutBottom.setVisibility(View.GONE);
+                }
+                else
+                {
+                    tvSkip.setVisibility(View.VISIBLE);
+                    relativeLayoutBottom.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+        return root;
     }
+
+    public void initIU(View root)
+    {
+
+
+
+
+
+    }
+
+
 }

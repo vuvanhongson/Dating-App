@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".notification.screensonboarding.OnBoardingFragment3">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/imagOnBoarding"
+        android:layout_width="200dp"
+        android:layout_height="233dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/btn_like_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitleOnBoarding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/app_name"
+        android:textColor="@color/xanh3"
+        android:textSize="34dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagOnBoarding" />
+
+    <TextView
+        android:id="@+id/tcScriptOnBoarding"
+        android:layout_width="261dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/fristScreensContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleOnBoarding" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btStart"
+        android:layout_width="248dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_buttom_getstart"
+        android:text="Get Start"
+        android:textAllCaps="true"
+        android:textColor="@color/trang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tcScriptOnBoarding" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

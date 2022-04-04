@@ -19,4 +19,10 @@ import com.google.gson.annotations.SerializedName;
             this.results = results;
         }
 
+        @Override
+        public String toString() {
+            return "SOProfileResponse{" +
+                    "results=" + results +
+                    '}';
+        }
     }

@@ -41,4 +41,12 @@ public class Result implements Serializable {
             this.version = version;
         }
 
+    @Override
+    public String toString() {
+        return "Result{" +
+                "user=" + user +
+                ", seed='" + seed + '\'' +
+                ", version='" + version + '\'' +
+                '}';
     }
+}

@@ -10,10 +10,12 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.tinder.data.model.Result;
 import com.example.tinder.data.model.SOProfileResponse;
 import com.example.tinder.databinding.ActivityMainBinding;
 import com.example.tinder.favoutite.FavouriteFragment;
 import com.example.tinder.home.HomeFragment;
+import com.example.tinder.home.HomeViewModel;
 import com.example.tinder.home.SwipeAdapter;
 import com.example.tinder.notification.NotificationFragment;
 
@@ -41,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
         binding.bottomNavigation.add(new MeowBottomNavigation.Model(3, R.drawable.ic_baseline_favorite_24));
         controllayout();
 
+//        //        profile.clear();
+//        HomeViewModel homeViewModel = new HomeViewModel();
+//        List<Result> profile = homeViewModel.getProfileResponse();
+//        Log.d("MainActivity8", "Length Pro: " + profile.size());
+//        Log.e("abc", homeViewModel.getProfileResponse().toString());
 
     }
 
@@ -76,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        binding.bottomNavigation.setCount(1, "10");
-        binding.bottomNavigation.show(1, true);
+        binding.bottomNavigation.setCount(2, "10");
+        binding.bottomNavigation.show(2, true);
 
         binding.bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
