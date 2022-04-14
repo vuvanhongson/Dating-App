@@ -79,7 +79,6 @@ public class NotificationFragment extends AppCompatDialogFragment {
             public void onClick(View v) {
                 if(viewPager.getCurrentItem() < 2)
                     viewPager.setCurrentItem( viewPager.getCurrentItem() + 1);
-
             }
         });
         initIU(root);
@@ -121,10 +120,6 @@ public class NotificationFragment extends AppCompatDialogFragment {
 
     public void initIU(View root)
     {
-
-
-
-
 
     }
 

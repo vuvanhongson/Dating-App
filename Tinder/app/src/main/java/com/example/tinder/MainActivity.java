@@ -29,7 +29,6 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-    private MainViewModel mainViewModel;
 
 
     @Override
@@ -38,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        binding.bottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.ic_baseline_home_24));
-        binding.bottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.ic_baseline_notifications_24));
+        binding.bottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.ic_baseline_person_add_alt_1_24));
+        binding.bottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.ic_baseline_home_24));
         binding.bottomNavigation.add(new MeowBottomNavigation.Model(3, R.drawable.ic_baseline_favorite_24));
         controllayout();
 
@@ -89,15 +88,12 @@ public class MainActivity extends AppCompatActivity {
         binding.bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
-//                Toast.makeText(MainActivity.this, "You click is " + item.getId(), Toast.LENGTH_SHORT).show();
             }
         });
 
         binding.bottomNavigation.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
             @Override
             public void onReselectItem(MeowBottomNavigation.Model item) {
-                //Display toast
-//                Toast.makeText(getApplicationContext(), "You Reselected" + item.getId(), Toast.LENGTH_SHORT).show();
             }
         });
 

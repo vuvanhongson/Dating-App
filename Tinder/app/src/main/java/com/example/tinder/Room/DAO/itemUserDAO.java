@@ -25,5 +25,8 @@ import java.util.List;
         @Query("SELECT * FROM ItemUser")
         public List<ItemUser> getItems();
 
+        @Query("DELETE FROM ItemUser WHERE id = :id")
+        public void deleteItemById(int id);
+
 
     }

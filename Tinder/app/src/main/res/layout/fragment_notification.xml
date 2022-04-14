@@ -48,9 +48,8 @@
             android:layout_height="60dp"
             android:layout_marginBottom="12dp"
             android:layout_centerInParent="true"
-            app:ci_drawable="@drawable/btn_like_green">
+            app:ci_drawable="@drawable/btn_like_green"/>
 
-        </me.relex.circleindicator.CircleIndicator>
 
         <LinearLayout
             android:id="@+id/layoutNext"

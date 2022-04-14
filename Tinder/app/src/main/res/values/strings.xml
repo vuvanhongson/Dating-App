@@ -3,4 +3,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fristScreensContent">Tìm kiếm bạn bè dễ dàng với Tinder! Cùng kết nối chia sẻ yêu thương.</string>
+    <string name="mybirthdayis">Gender identity</string>
+    <string name="mynameis">My name is</string>
+    <string name="myaddressis">My address is</string>
+    <string name="myphonenumberis">My phone number is</string>
+    <string name="myaccountis">My account is</string>
+    <string name="myemailis">My email is</string>
+    <string name="deleteItemUser">Xóa đối tượng này khỏi danh sách này?</string>
+    <string name="luachondexoa">Hãy lựa chọn bên dưới để xác nhận</string>
+    <string name="yes">Có</string>
+    <string name="no">Không</string>
 </resources>

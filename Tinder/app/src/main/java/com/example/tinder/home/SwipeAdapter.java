@@ -76,18 +76,10 @@ public class SwipeAdapter extends BaseAdapter {
 
         CustomClick(btnCalendar, btnMagicBall, btnMap, btnPhone, btnLock, imgCrollBar, tvten, tvTitle, position, btnLeft, btnRight);
 
-
         try {
             String url = list.get(position).getUser().getPicture();
             Log.d("MainActivity999", "Position is profile of: " + position);
             Log.d("MainActivity999", "This is profile of: " + list.get(position).getUser().getName().getFirst() + " - position " + position +" - " + url);
-
-//            Picasso.with(context)
-//                    .load("http://api.randomuser.me/portraits/men/86.jpg")
-//                    .placeholder(R.mipmap.ic_launcher)
-////                    .error(R.drawable.btn_incorress)
-//                    .resize(600,600)
-//                    .into(imgUser);
 
             tvten.setText(list.get(position).getUser().getLocation().getStreet() + ", " + list.get(position).getUser().getLocation().getCity());
             Glide.with(context)
@@ -102,7 +94,6 @@ public class SwipeAdapter extends BaseAdapter {
 
         number = position;
 
-
         return convertView;
     }
 
@@ -114,15 +105,6 @@ public class SwipeAdapter extends BaseAdapter {
         btnLock.setImageResource(R.drawable.lock_grey);
     }
 
-    private void AnhXa(View convertView, ImageView btnCalendar, ImageView btnMagicBall, ImageView btnMap, ImageView btnPhone, ImageView btnLock, TextView tvten) {
-        btnCalendar = convertView.findViewById(R.id.btnCalendar);
-        btnMagicBall = convertView.findViewById(R.id.btnMagicBall);
-        btnMap = convertView.findViewById(R.id.btnMap);
-        btnPhone = convertView.findViewById(R.id.btnPhone);
-        btnLock = convertView.findViewById(R.id.btnLock);
-
-        tvten = convertView.findViewById(R.id.tvten);
-    }
 
     private void CustomClick(ImageView btnCalendar, ImageView btnMagicBall, ImageView btnMap, ImageView btnPhone, ImageView btnLock, ImageView imgCrollBar, TextView tvten, TextView tvTitle, int position, ImageView btnLeft,ImageView btnRight) {
         tvten.setOnClickListener(new View.OnClickListener() {
@@ -134,30 +116,30 @@ public class SwipeAdapter extends BaseAdapter {
         btnCalendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-                tvTitle.setText("My birthday is");
-                tvten.setText("17/02/2000");
+//                tvTitle.setText(R.string.myemailis);
+//                tvten.setText(list.get(position).getUser().getEmail());
+                tvTitle.setText(R.string.mybirthdayis);
+                tvten.setText(list.get(position).getUser().getGender());
                 CustomGrayBtn(btnCalendar, btnMagicBall, btnMap, btnPhone, btnLock);
                 btnCalendar.setImageResource(R.drawable.calendar_green);
-                imgCrollBar.animate().translationXBy(imgCrollBar.getX()).translationX(-170).setDuration(200);
+                imgCrollBar.animate().translationXBy(imgCrollBar.getX()).translationX(-(btnMagicBall.getX() + btnMagicBall.getWidth()/2 + 1)).setDuration(200);
             }
         });
 
         btnMagicBall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvTitle.setText("My name is");
+                tvTitle.setText(R.string.mynameis);
                 tvten.setText(list.get(position).getUser().getName().getFirst());
                 CustomGrayBtn(btnCalendar, btnMagicBall, btnMap, btnPhone, btnLock);
                 btnMagicBall.setImageResource(R.drawable.margic_ball_green);
-                imgCrollBar.animate().translationXBy(imgCrollBar.getX()).translationX(-350).setDuration(200);
+                imgCrollBar.animate().translationXBy(imgCrollBar.getX()).translationX(-(btnCalendar.getX() + btnCalendar.getWidth()/2 + 1)).setDuration(200);
             }
         });
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvTitle.setText("My address is");
+                tvTitle.setText(R.string.myaddressis);
                 tvten.setText(list.get(position).getUser().getLocation().getStreet() + ", " + list.get(position).getUser().getLocation().getCity());
                 CustomGrayBtn(btnCalendar, btnMagicBall, btnMap, btnPhone, btnLock);
                 btnMap.setImageResource(R.drawable.mao_green);
@@ -167,21 +149,21 @@ public class SwipeAdapter extends BaseAdapter {
         btnPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvTitle.setText("My phone number is");
+                tvTitle.setText(R.string.myphonenumberis);
                 tvten.setText(list.get(position).getUser().getPhone());
                 CustomGrayBtn(btnCalendar, btnMagicBall, btnMap, btnPhone, btnLock);
                 btnPhone.setImageResource(R.drawable.phone_green);
-                imgCrollBar.animate().translationXBy(imgCrollBar.getX()).translationX(170).setDuration(200);
+                imgCrollBar.animate().translationXBy(imgCrollBar.getX()).translationX((btnMagicBall.getX() + btnMagicBall.getWidth()/2 + 1)).setDuration(200);
             }
         });
         btnLock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvTitle.setText("My account is");
+                tvTitle.setText(R.string.myaccountis);
                 tvten.setText("@" + list.get(position).getUser().getUsername());
                 CustomGrayBtn(btnCalendar, btnMagicBall, btnMap, btnPhone, btnLock);
                 btnLock.setImageResource(R.drawable.lock_green);
-                imgCrollBar.animate().translationXBy(imgCrollBar.getX()).translationX(350).setDuration(200);
+                imgCrollBar.animate().translationXBy(imgCrollBar.getX()).translationX((btnCalendar.getX() + btnMagicBall.getWidth()/2 + 1)).setDuration(200);
             }
         });
         btnLeft.setOnClickListener(new View.OnClickListener() {
@@ -223,7 +205,6 @@ public class SwipeAdapter extends BaseAdapter {
                 item.setSsn(user.getSsn());
                 item.setPicture(user.getPicture());
 
-
                 itemDAO.insert(item);
                 HomeFragment.FlingAdapter(0);
             }
@@ -235,27 +216,21 @@ public class SwipeAdapter extends BaseAdapter {
         if((list.size() - 3) >= position)
         {
             HomeViewModel homeViewModel = new HomeViewModel();
-
-
             List<Result> profile = homeViewModel.getProfileResponse();
             Log.e("size", String.valueOf(profile.size()));
-
             this.list = profile;
-
         }
     }
 
     public static Result SwipeRight()
     {
         int point = number - 3;
-
         return  list.get(point);
     }
 
     public static int getPosition()
     {
         int point = number - 3;
-
         return  point;
     }
 

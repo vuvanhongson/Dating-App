@@ -11,7 +11,7 @@
         android:id="@+id/imagOnBoarding"
         android:layout_width="200dp"
         android:layout_height="233dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:src="@drawable/btn_like_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"

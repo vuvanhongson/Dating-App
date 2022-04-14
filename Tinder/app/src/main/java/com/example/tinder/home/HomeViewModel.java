@@ -27,11 +27,8 @@ public class HomeViewModel extends ViewModel {
     private Result result;
     private static List<Result> pro = new ArrayList<>();
 
-
-
     public HomeViewModel(){
         for(int a = 2; a <= 6; a++) {
-
                 Log.d("MainActivity4", "Load i:" + a);
                 loadAnswers();
         }
@@ -52,18 +49,16 @@ public class HomeViewModel extends ViewModel {
                     Log.d("MainActivity9", "This is: " + result.getUser().getName().getFirst());
                     Log.d("MainActivity0", "posts loaded from API");
                 }else {
-                    int statusCode  = response.code();
+                    int statusCode = response.code();
                     // handle request errors depending on status code
                     Log.d("MainActivity0", "posts loaded not Successful");
                 }
-
             }
 
             @Override
             public void onFailure(Call<SOProfileResponse> call, Throwable t) {
-
                 Log.d("MainActivity0", "error loading from API");
-
+                
             }
         });
 
@@ -73,13 +68,11 @@ public class HomeViewModel extends ViewModel {
         }
         catch (Exception e)
         {}
-
     }
 
     public List<Result> getProfileResponse() {
         Log.d("MainActivity", "get Profile API");
         Log.d("MainActivity8", "Length Pro: " + pro.size());
-//        Log.d("MainActivity10", "Thí is: " + getResult().getUser().getName().getFirst());
         return pro;
     }
 

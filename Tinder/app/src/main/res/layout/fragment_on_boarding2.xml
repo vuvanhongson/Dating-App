@@ -9,10 +9,10 @@
     <!-- TODO: Update blank fragment layout -->
     <ImageView
         android:id="@+id/imagOnBoarding"
-        android:layout_width="200dp"
-        android:layout_height="233dp"
-        android:layout_marginTop="100dp"
-        android:src="@drawable/mao_green"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/onboarding01"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +21,7 @@
         android:id="@+id/tvTitleOnBoarding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="-26dp"
         android:text="@string/app_name"
         android:textColor="@color/xanh4"
         android:textSize="34dp"

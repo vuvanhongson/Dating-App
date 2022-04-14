@@ -45,7 +45,6 @@ public class HomeFragment extends Fragment {
 
         }
         Log.d("MainActivity2", "onCreate ");
-
     }
 
     @Override
@@ -55,7 +54,6 @@ public class HomeFragment extends Fragment {
         koloda = root.findViewById(R.id.koloda);
 
 //        binding = DataBindingUtil.setContentView(getActivity(), R.layout.fragment_home);
-//
 //        list = new ArrayList<>();
 //        adapter = new SwipeAdapter(getContext(), list);
 //        koloda.setAdapter(adapter);
@@ -66,7 +64,6 @@ public class HomeFragment extends Fragment {
         return root;
     }
 
-
     private void loadProfile() {
 
         if(point >= 0)
@@ -76,7 +73,7 @@ public class HomeFragment extends Fragment {
             {
                 homeViewModel.removeList(0);
             }
-
+            point = -1;
         }
 //        profile.clear();
         HomeViewModel homeViewModel = new HomeViewModel();
@@ -84,17 +81,11 @@ public class HomeFragment extends Fragment {
         Log.d("MainActivity8", "Length Pro: " + profile.size());
         Log.e("abc", homeViewModel.getProfileResponse().toString());
 
-
         if(profile.size() > 0)
         {
             adapter = new SwipeAdapter(getContext(), profile);
             koloda.setAdapter(adapter);
         }
-
-
-
-
-
     }
 
     public static void FlingAdapter(int i) {
@@ -123,15 +114,14 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onCardSwipedLeft(int i) {
-
-                Toast.makeText(getContext(), "on onCardSwipedLeft", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getContext(), "on onCardSwipedLeft", Toast.LENGTH_SHORT).show();
                 point = SwipeAdapter.getPosition();
             }
 
             @Override
             public void onCardSwipedRight(int i) {
                 Result result = SwipeAdapter.SwipeRight();
-                Toast.makeText(getContext(), "Swipe Right is : "+ result.getUser().getName().getFirst(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getContext(), "Swipe Right is : "+ result.getUser().getName().getFirst(), Toast.LENGTH_SHORT).show();
                 ItemUser item = new ItemUser();
                 AppDatabase database = Room.databaseBuilder(getContext(), AppDatabase.class, "mydb")
                         .allowMainThreadQueries()
@@ -162,10 +152,8 @@ public class HomeFragment extends Fragment {
                 item.setSsn(user.getSsn());
                 item.setPicture(user.getPicture());
 
-
                 itemDAO.insert(item);
                 point = SwipeAdapter.getPosition();
-
             }
 
             @Override

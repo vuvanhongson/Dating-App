@@ -1,9 +1,12 @@
 package com.example.tinder.favoutite;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.os.CountDownTimer;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,10 +15,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
 import com.bumptech.glide.Glide;
 import com.example.tinder.R;
+import com.example.tinder.Room.AppDatabase;
+import com.example.tinder.Room.DAO.itemUserDAO;
 import com.example.tinder.Room.ItemUser;
 import com.squareup.picasso.Picasso;
 
@@ -71,6 +80,43 @@ public class itemUserAdapter extends RecyclerView.Adapter<itemUserAdapter.ViewHo
         TextView tvphone = holder.tvPhone;
         tvphone.setText(item.getPhone());
 
+        CardView layoutItem = holder.layoutItem;
+        ConstraintLayout layoutConstrain = holder.layoutConstrain;
+
+        ImageView btnRemove = holder.btnRemove;
+        btnRemove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(mContext, android.R.style.Theme_DeviceDefault_Light_Dialog);
+                builder.setTitle(R.string.deleteItemUser);
+                builder.setMessage(R.string.luachondexoa);
+                builder.setIcon(R.drawable.ic_baseline_remove_circle_outline_24);
+                builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        mItems.remove(position);
+                        notifyDataSetChanged();
+                        AppDatabase database = Room.databaseBuilder(mContext, AppDatabase.class, "mydb")
+                                .allowMainThreadQueries()
+                                .build();
+                        itemUserDAO itemDAO = database.getItemDAO();
+                        itemDAO.deleteItemById(item.getId());
+
+                    }
+                });
+                builder.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                builder.show();
+//                layoutItem.animate().translationXBy(layoutItem.getX()).translationX(-(layoutItem.getWidth())).setDuration(200);
+//                layoutItem.setCardBackgroundColor(Color.parseColor("#fd6003"));
+
+            }
+        });
+
     }
 
     @Override
@@ -81,7 +127,9 @@ public class itemUserAdapter extends RecyclerView.Adapter<itemUserAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public TextView tvName, tvUserName, tvPhone;
-        public ImageView imgAvatar;
+        public ImageView imgAvatar, btnRemove;
+        public CardView layoutItem;
+        public ConstraintLayout layoutConstrain;
         PostItemListener mItemListener;
 
         public ViewHolder(View itemView, PostItemListener postItemListener) {
@@ -92,6 +140,9 @@ public class itemUserAdapter extends RecyclerView.Adapter<itemUserAdapter.ViewHo
             tvUserName = itemView.findViewById(R.id.tvUserName);
             tvPhone = itemView.findViewById(R.id.tvPhone);
             imgAvatar = itemView.findViewById(R.id.imgAvatar);
+            btnRemove = itemView.findViewById(R.id.btnRemove);
+            layoutItem = itemView.findViewById(R.id.layoutItem);
+            layoutConstrain = itemView.findViewById(R.id.layoutConstrain);
 
 
 

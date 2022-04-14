@@ -2,7 +2,10 @@ package com.example.tinder.favoutite;
 
 import android.os.Bundle;
 
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,15 +21,20 @@ import com.example.tinder.Room.AppDatabase;
 import com.example.tinder.Room.DAO.itemUserDAO;
 import com.example.tinder.Room.ItemUser;
 import com.example.tinder.data.model.User;
+import com.example.tinder.databinding.FragmentFavouriteBinding;
 import com.example.tinder.home.HomeFragment;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
 
 public class FavouriteFragment extends Fragment {
+
+    private FragmentFavouriteBinding  binding;
     private itemUserAdapter mAdapter;
-    private RecyclerView mRecyclerView;
+    private FavouriteViewModel favouriteViewModel;
+//    private RecyclerView mRecyclerView;
     LinearLayoutManager manager;
 
     public FavouriteFragment() {
@@ -49,10 +57,13 @@ public class FavouriteFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_favourite, container, false);
+      binding =  FragmentFavouriteBinding.inflate(inflater,container, false);
+//        View root = inflater.inflate(R.layout.fragment_favourite, container, false);
         // Inflate the layout for this fragment
         Log.d("MainActivity3", "onCreateView ");
-        mRecyclerView = (RecyclerView) root.findViewById(R.id.rc_film);
+//        favouriteViewModel = new ViewModelProvider(this).get(FavouriteViewModel.class);
+        favouriteViewModel = new FavouriteViewModel(this.getContext());
+
         mAdapter = new itemUserAdapter(getContext(), new ArrayList<ItemUser>(0), new itemUserAdapter.PostItemListener() {
 
             @Override
@@ -63,16 +74,26 @@ public class FavouriteFragment extends Fragment {
 
         //        RecyclerView.LayoutManager
         manager = new LinearLayoutManager(getContext());
-        mRecyclerView.setLayoutManager(manager);
-        mRecyclerView.setAdapter(mAdapter);
-        mRecyclerView.setHasFixedSize(true);
+        binding.rcFilm.setLayoutManager(manager);
+        binding.rcFilm.setAdapter(mAdapter);
+        binding.rcFilm.setHasFixedSize(true);
 //        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL);
 //        mRecyclerView.addItemDecoration(itemDecoration);
 
-        loadUser();
+//        loadUser();
 
 
-        return root;
+        favouriteViewModel.getmListUserLiveData().observe(getActivity(), new Observer<List<ItemUser>>() {
+            @Override
+            public void onChanged(List<ItemUser> itemUsers) {
+                mAdapter.updateAnswers(itemUsers);
+
+            }
+        });
+
+
+
+        return binding.getRoot();
     }
 
     private void loadUser() {

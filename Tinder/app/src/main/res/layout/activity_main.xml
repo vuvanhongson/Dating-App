@@ -48,7 +48,7 @@
             app:mbn_countBackgroundColor="@color/hong1"
             app:mbn_countTextColor="@color/trang"
             app:mbn_defaultIconColor="@color/trang"
-            app:mbn_selectedIconColor="@color/trang"></com.etebarian.meowbottomnavigation.MeowBottomNavigation>
+            app:mbn_selectedIconColor="@color/trang" />
 
 
 
