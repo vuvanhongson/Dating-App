@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.tinder.R;
 import com.example.tinder.data.model.Result;
@@ -53,12 +54,6 @@ public class NotificationFragment extends AppCompatDialogFragment {
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_notification, container, false);// Inflate the layout for this fragment
 
-//        profile.clear();
-        HomeViewModel homeViewModel = new HomeViewModel();
-        List<Result> profile = homeViewModel.getProfileResponse();
-        Log.d("MainActivity8", "Length Pro: " + profile.size());
-        Log.e("abc", homeViewModel.getProfileResponse().toString());
-
         viewPager = root.findViewById(R.id.viewPager);
 
         tvSkip = root.findViewById(R.id.tvSkip);
@@ -69,6 +64,7 @@ public class NotificationFragment extends AppCompatDialogFragment {
         tvSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                Toast.makeText(getContext(), "You Touch Me?", Toast.LENGTH_SHORT).show();
                 viewPager.setCurrentItem(2);
             }
         });

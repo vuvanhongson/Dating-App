@@ -7,7 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 import androidx.room.Room;
 
 import com.example.tinder.R;
@@ -16,6 +19,8 @@ import com.example.tinder.Room.DAO.itemUserDAO;
 import com.example.tinder.Room.ItemUser;
 import com.example.tinder.data.model.Result;
 import com.example.tinder.data.model.User;
+import com.example.tinder.databinding.FragmentFavouriteBinding;
+import com.example.tinder.databinding.FragmentHomeBinding;
 import com.yalantis.library.Koloda;
 import com.yalantis.library.KolodaListener;
 
@@ -26,9 +31,12 @@ import java.util.List;
 
 
 public class HomeFragment extends Fragment {
-    //    private HomeViewModel homeViewModel;
+    private static FragmentHomeBinding binding;
+//    private FragmentHomeBinding binding;
+    private HomeViewModel homeViewModel;
     private static SwipeAdapter adapter;
-    Result p;
+//    private MutableLiveData<Result> liveData;
+//    Result p;
     List<Result> profile = new ArrayList<>();
     public static Koloda koloda;
     public static int point;
@@ -50,58 +58,49 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-        koloda = root.findViewById(R.id.koloda);
-
-//        binding = DataBindingUtil.setContentView(getActivity(), R.layout.fragment_home);
-//        list = new ArrayList<>();
-//        adapter = new SwipeAdapter(getContext(), list);
-//        koloda.setAdapter(adapter);
+        binding =  FragmentHomeBinding.inflate(inflater,container, false);
         Log.d("MainActivity1", "onCreateView ");
-        profile.clear();
+        homeViewModel = new HomeViewModel();
+//        profile.clear();
         loadProfile();
         initializeDeck();
-        return root;
+        return binding.getRoot();
     }
 
+
     private void loadProfile() {
+            homeViewModel.getLiveData().observe(getActivity(), new Observer<Result>() {
+                @Override
+                public void onChanged(Result result) {
+                    Log.e("list", result.toString());
+                    profile.add(result);
+                    Log.d("profile11", profile.toString());
+//                    adapter.updateAnswers(profile);
+                    if(profile.size() > 3) {
+                        Log.d("profile111"," " + profile.size());
+                        adapter = new SwipeAdapter(getContext(), profile);
+                        binding.koloda.setAdapter(adapter);
+                    }
+                }
+            });
+        Log.d("profile00", profile.toString());
 
-        if(point >= 0)
-        {
-            HomeViewModel homeViewModel = new HomeViewModel();
-            for(int i = 0; i <= point; i++)
-            {
-                homeViewModel.removeList(0);
-            }
-            point = -1;
-        }
-//        profile.clear();
-        HomeViewModel homeViewModel = new HomeViewModel();
-        profile = homeViewModel.getProfileResponse();
-        Log.d("MainActivity8", "Length Pro: " + profile.size());
-        Log.e("abc", homeViewModel.getProfileResponse().toString());
-
-        if(profile.size() > 0)
-        {
-            adapter = new SwipeAdapter(getContext(), profile);
-            koloda.setAdapter(adapter);
-        }
     }
 
     public static void FlingAdapter(int i) {
         if(i == 1) {
-            koloda.onClickLeft();
+            binding.koloda.onClickLeft();
             point = SwipeAdapter.getPosition();
         }
         else
 //            koloda.onClickRight();
-        koloda.onButtonClick(true);
+        binding.koloda.onButtonClick(true);
         point = SwipeAdapter.getPosition();
     }
 
     private void initializeDeck() {
 
-        koloda.setKolodaListener(new KolodaListener() {
+        binding.koloda.setKolodaListener(new KolodaListener() {
             @Override
             public void onNewTopCard(int i) {
 

@@ -58,12 +58,9 @@ public class FavouriteFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
       binding =  FragmentFavouriteBinding.inflate(inflater,container, false);
-//        View root = inflater.inflate(R.layout.fragment_favourite, container, false);
-        // Inflate the layout for this fragment
         Log.d("MainActivity3", "onCreateView ");
-//        favouriteViewModel = new ViewModelProvider(this).get(FavouriteViewModel.class);
+//      viewmodel
         favouriteViewModel = new FavouriteViewModel(this.getContext());
-
         mAdapter = new itemUserAdapter(getContext(), new ArrayList<ItemUser>(0), new itemUserAdapter.PostItemListener() {
 
             @Override
@@ -77,11 +74,6 @@ public class FavouriteFragment extends Fragment {
         binding.rcFilm.setLayoutManager(manager);
         binding.rcFilm.setAdapter(mAdapter);
         binding.rcFilm.setHasFixedSize(true);
-//        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL);
-//        mRecyclerView.addItemDecoration(itemDecoration);
-
-//        loadUser();
-
 
         favouriteViewModel.getmListUserLiveData().observe(getActivity(), new Observer<List<ItemUser>>() {
             @Override
@@ -96,16 +88,4 @@ public class FavouriteFragment extends Fragment {
         return binding.getRoot();
     }
 
-    private void loadUser() {
-        AppDatabase database = Room.databaseBuilder(getContext(), AppDatabase.class, "mydb")
-                .allowMainThreadQueries()
-                .build();
-        itemUserDAO itemDAO = database.getItemDAO();
-
-        List<ItemUser> list = itemDAO.getItems();
-
-
-        mAdapter.updateAnswers(list);
-
-    }
 }

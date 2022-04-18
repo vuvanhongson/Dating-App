@@ -4,6 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+        <variable
+            name="HomeViewModel"
+            type="com.example.tinder.home.HomeViewModel" />
 
     </data>
 

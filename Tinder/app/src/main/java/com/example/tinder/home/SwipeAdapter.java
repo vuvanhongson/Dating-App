@@ -10,6 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 import androidx.room.Room;
 
 import com.bumptech.glide.Glide;
@@ -32,6 +35,8 @@ public class SwipeAdapter extends BaseAdapter {
     private Context context;
     private static List<Result> list;
     ItemUser item = new ItemUser();
+//    private MutableLiveData<Result> liveData;
+
 
 
     public SwipeAdapter(Context context, List<Result> zlist) {
@@ -90,7 +95,7 @@ public class SwipeAdapter extends BaseAdapter {
         } catch (Exception e) {
         }
 
-        CheckList(position);
+        CheckList(position, list);
 
         number = position;
 
@@ -211,12 +216,22 @@ public class SwipeAdapter extends BaseAdapter {
         });
     }
 
-    private void CheckList(int position)
+    private void CheckList(int position, List<Result> profile)
     {
-        if((list.size() - 3) >= position)
+//        List<Result> profile = new ArrayList<>();
+        if((list.size()) == position + 1)
         {
             HomeViewModel homeViewModel = new HomeViewModel();
-            List<Result> profile = homeViewModel.getProfileResponse();
+            homeViewModel.getLiveData().observe((LifecycleOwner) context, new Observer<Result>() {
+                @Override
+                public void onChanged(Result result) {
+                    Log.e("list", result.toString());
+                    profile.add(result);
+                    Log.d("profile1", profile.toString());
+                }
+
+
+            });
             Log.e("size", String.valueOf(profile.size()));
             this.list = profile;
         }
@@ -224,13 +239,13 @@ public class SwipeAdapter extends BaseAdapter {
 
     public static Result SwipeRight()
     {
-        int point = number - 3;
+        int point = number;
         return  list.get(point);
     }
 
     public static int getPosition()
     {
-        int point = number - 3;
+        int point = number;
         return  point;
     }
 
@@ -238,6 +253,11 @@ public class SwipeAdapter extends BaseAdapter {
     {
         list.remove(i);
         return 1;
+    }
+
+    public void updateAnswers(List<Result> zlist) {
+        this.list = zlist;
+//        notifyDataSetChanged();
     }
 
 

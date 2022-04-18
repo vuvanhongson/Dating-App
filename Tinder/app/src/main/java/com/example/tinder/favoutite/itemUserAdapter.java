@@ -111,8 +111,6 @@ public class itemUserAdapter extends RecyclerView.Adapter<itemUserAdapter.ViewHo
                     }
                 });
                 builder.show();
-//                layoutItem.animate().translationXBy(layoutItem.getX()).translationX(-(layoutItem.getWidth())).setDuration(200);
-//                layoutItem.setCardBackgroundColor(Color.parseColor("#fd6003"));
 
             }
         });
@@ -144,14 +142,8 @@ public class itemUserAdapter extends RecyclerView.Adapter<itemUserAdapter.ViewHo
             layoutItem = itemView.findViewById(R.id.layoutItem);
             layoutConstrain = itemView.findViewById(R.id.layoutConstrain);
 
-
-
-
             this.mItemListener = postItemListener;
             itemView.setOnClickListener(this);
-
-
-
 
         }
 

@@ -5,10 +5,13 @@ import com.example.tinder.data.model.SOProfileResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
+import rx.Observable;
+import rx.Single;
 
 public interface SOService {
 
 //    @Headers("app_token: dCuW7UQMbdvpcBDfzolAOSGFIcAec11a")
     @GET("api/0.4/?randomapi")
-    Call<SOProfileResponse> getProfile();
+//    Call<SOProfileResponse> getProfile();
+    Single<SOProfileResponse> getProfile();
 }

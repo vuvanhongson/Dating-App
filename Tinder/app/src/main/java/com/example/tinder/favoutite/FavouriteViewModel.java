@@ -35,9 +35,6 @@ public class FavouriteViewModel  extends ViewModel {
 
 
     private void initData() {
-//        mListUser = new ArrayList<>();
-//        mListUser.add(new ItemUser());
-
         AppDatabase database = Room.databaseBuilder(mcontext, AppDatabase.class, "mydb")
                 .allowMainThreadQueries()
                 .build();
@@ -46,7 +43,5 @@ public class FavouriteViewModel  extends ViewModel {
         List<ItemUser> list = itemDAO.getItems();
         mListUserLiveData.postValue(list);
 //
-//        mListUser = list;
-//        mListUserLiveData.setValue(mListUser);
     }
 }
