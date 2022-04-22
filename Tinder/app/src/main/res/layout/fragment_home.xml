@@ -6,14 +6,14 @@
     <data>
         <variable
             name="HomeViewModel"
-            type="com.example.tinder.home.HomeViewModel" />
+            type="com.example.tinder.viewmodel.home.HomeViewModel" />
 
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".home.HomeFragment">
+        tools:context=".view.home.HomeFragment">
 
 
         <com.yalantis.library.Koloda
@@ -21,6 +21,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:koloda_card_layout="@layout/layout_item_swipe_card" />
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/progress"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:SpinKit_Color="@color/xanh6"
+            android:visibility="gone"/>
 
     </FrameLayout>
 </layout>

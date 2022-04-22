@@ -1,16 +1,10 @@
-package com.example.tinder.favoutite;
+package com.example.tinder.view.favoutite;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.os.CountDownTimer;
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,11 +20,8 @@ import com.example.tinder.R;
 import com.example.tinder.Room.AppDatabase;
 import com.example.tinder.Room.DAO.itemUserDAO;
 import com.example.tinder.Room.ItemUser;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
-
-import static android.content.Context.MODE_PRIVATE;
 
 public class itemUserAdapter extends RecyclerView.Adapter<itemUserAdapter.ViewHolder> {
 

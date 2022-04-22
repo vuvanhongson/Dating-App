@@ -1,4 +1,4 @@
-package com.example.tinder.data.model;
+package com.example.tinder.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

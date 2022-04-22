@@ -1,26 +1,31 @@
-package com.example.tinder.home;
+package com.example.tinder.view.home;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.room.Room;
 
-import com.example.tinder.R;
+import com.example.tinder.MainActivity;
 import com.example.tinder.Room.AppDatabase;
 import com.example.tinder.Room.DAO.itemUserDAO;
 import com.example.tinder.Room.ItemUser;
-import com.example.tinder.data.model.Result;
-import com.example.tinder.data.model.User;
-import com.example.tinder.databinding.FragmentFavouriteBinding;
+import com.example.tinder.data.remote.SOService;
+import com.example.tinder.model.Result;
+import com.example.tinder.model.SOProfileResponse;
+import com.example.tinder.model.User;
 import com.example.tinder.databinding.FragmentHomeBinding;
+import com.example.tinder.viewmodel.home.HomeViewModel;
+import com.github.ybq.android.spinkit.style.DoubleBounce;
+import com.github.ybq.android.spinkit.style.WanderingCubes;
 import com.yalantis.library.Koloda;
 import com.yalantis.library.KolodaListener;
 
@@ -29,17 +34,21 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
 
-public class HomeFragment extends Fragment {
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
+import rx.subscriptions.CompositeSubscription;
+
+public class HomeFragment extends Fragment{
     private static FragmentHomeBinding binding;
-//    private FragmentHomeBinding binding;
-    private HomeViewModel homeViewModel;
     private static SwipeAdapter adapter;
-//    private MutableLiveData<Result> liveData;
-//    Result p;
+
     List<Result> profile = new ArrayList<>();
     public static Koloda koloda;
     public static int point;
+    private HomeViewModel homeViewModel;
+
 
     public HomeFragment() {
         // Required empty public constructor
@@ -49,10 +58,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-
-        }
-        Log.d("MainActivity2", "onCreate ");
+        if (getArguments() != null) { }
     }
 
     @Override
@@ -60,30 +66,80 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding =  FragmentHomeBinding.inflate(inflater,container, false);
         Log.d("MainActivity1", "onCreateView ");
-        homeViewModel = new HomeViewModel();
-//        profile.clear();
-        loadProfile();
-        initializeDeck();
+        setIsLoading(true);
+        initSwipe();
         return binding.getRoot();
     }
 
+    public void loadAPIData()
+    {
+        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
+        homeViewModel.getResult().observe(getViewLifecycleOwner(), new Observer<Result>() {
+            @Override
+            public void onChanged(Result result) {
+                if(result != null)
+                {
+                    profile.add(result);
+//                    adapter.updateAnswers(result);
+                    Log.d("profile", "Profile of: " + profile.toString());
+                    Log.d("profile2", "Profile size : " + profile.size());
+
+                }
+                else
+                {
+                    Log.d("profile", "Profile is NULL");
+                    Toast.makeText(getContext(), "Error in fetching data", Toast.LENGTH_SHORT).show();
+                }
+                adapter = new SwipeAdapter(getContext(), profile);
+                binding.koloda.setAdapter(adapter);
+            }
+        });
+//        homeViewModel.makeApiCall();
+    }
+
+    private void initSwipe()
+    {
+        loadAPIData();
+        loadAPIData();
+        loadAPIData();
+        Log.d("profile3", "Profile size : " + profile.size());
+//        adapter = new SwipeAdapter(getContext(), profile);
+//        binding.koloda.setAdapter(adapter);
+    }
+
+
+
+
+
+    private void setIsLoading(boolean isLoading)
+    {
+        binding.progress.setIndeterminateDrawable( new DoubleBounce());
+        binding.progress.setVisibility(View.VISIBLE);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                binding.progress.setVisibility(View.GONE);
+//                relativeLayout.setVisibility(View.GONE);
+            }
+        },2000);
+    }
 
     private void loadProfile() {
-            homeViewModel.getLiveData().observe(getActivity(), new Observer<Result>() {
-                @Override
-                public void onChanged(Result result) {
-                    Log.e("list", result.toString());
-                    profile.add(result);
-                    Log.d("profile11", profile.toString());
-//                    adapter.updateAnswers(profile);
-                    if(profile.size() > 3) {
-                        Log.d("profile111"," " + profile.size());
-                        adapter = new SwipeAdapter(getContext(), profile);
-                        binding.koloda.setAdapter(adapter);
-                    }
-                }
-            });
-        Log.d("profile00", profile.toString());
+//            homeViewModel.getLiveData().observe(getActivity(), new Observer<Result>() {
+//                @Override
+//                public void onChanged(Result result) {
+//                    Log.e("list", result.toString());
+//                    profile.add(result);
+//                    Log.d("profile11", profile.toString());
+////                    adapter.updateAnswers(profile);
+//                    if(profile.size() > 3) {
+//                        Log.d("profile111"," " + profile.size());
+//                        adapter = new SwipeAdapter(getContext(), profile);
+//                        binding.koloda.setAdapter(adapter);
+//                    }
+//                }
+//            });
+//        Log.d("profile00", profile.toString());
 
     }
 

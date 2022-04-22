@@ -5,26 +5,12 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
-import com.example.tinder.data.model.Result;
-import com.example.tinder.data.model.SOProfileResponse;
 import com.example.tinder.databinding.ActivityMainBinding;
-import com.example.tinder.favoutite.FavouriteFragment;
-import com.example.tinder.home.HomeFragment;
-import com.example.tinder.home.HomeViewModel;
-import com.example.tinder.home.SwipeAdapter;
-import com.example.tinder.notification.NotificationFragment;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import com.example.tinder.view.favoutite.FavouriteFragment;
+import com.example.tinder.view.home.HomeFragment;
+import com.example.tinder.view.notification.NotificationFragment;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,13 +1,11 @@
 package com.example.tinder.Room;
 
-import android.provider.MediaStore;
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import com.example.tinder.data.model.Location;
-import com.example.tinder.data.model.Name;
+import com.example.tinder.model.Location;
+import com.example.tinder.model.Name;
 
 @Entity(tableName = "ItemUser")
 public class ItemUser {

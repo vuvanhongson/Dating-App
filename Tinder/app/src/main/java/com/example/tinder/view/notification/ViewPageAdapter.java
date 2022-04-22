@@ -1,13 +1,13 @@
-package com.example.tinder.notification;
+package com.example.tinder.view.notification;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.tinder.notification.screensonboarding.OnBoardingFragment1;
-import com.example.tinder.notification.screensonboarding.OnBoardingFragment2;
-import com.example.tinder.notification.screensonboarding.OnBoardingFragment3;
+import com.example.tinder.view.notification.screensonboarding.OnBoardingFragment1;
+import com.example.tinder.view.notification.screensonboarding.OnBoardingFragment2;
+import com.example.tinder.view.notification.screensonboarding.OnBoardingFragment3;
 
 public class ViewPageAdapter extends FragmentStatePagerAdapter {
     public ViewPageAdapter(@NonNull FragmentManager fm, int behavior) {

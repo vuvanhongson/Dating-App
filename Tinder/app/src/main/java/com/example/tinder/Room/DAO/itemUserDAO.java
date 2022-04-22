@@ -9,7 +9,7 @@ import androidx.room.Update;
 
 
 import com.example.tinder.Room.ItemUser;
-import com.example.tinder.data.model.User;
+import com.example.tinder.model.User;
 
 import java.util.List;
 

@@ -1,33 +1,21 @@
-package com.example.tinder.notification;
+package com.example.tinder.view.notification;
 
-import android.app.AppComponentFactory;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDialogFragment;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.tinder.R;
-import com.example.tinder.data.model.Result;
-import com.example.tinder.home.HomeViewModel;
-import com.example.tinder.home.SwipeAdapter;
-
-import java.util.List;
 
 import me.relex.circleindicator.CircleIndicator;
-
-import static com.example.tinder.home.HomeFragment.koloda;
 
 
 public class NotificationFragment extends AppCompatDialogFragment {

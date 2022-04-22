@@ -1,4 +1,4 @@
-package com.example.tinder.notification.screensonboarding;
+package com.example.tinder.view.notification.screensonboarding;
 
 import android.os.Bundle;
 

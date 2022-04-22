@@ -1,4 +1,4 @@
-package com.example.tinder.favoutite;
+package com.example.tinder.viewmodel.favourite;
 
 import android.content.ClipData;
 import android.content.Context;
@@ -35,6 +35,7 @@ public class FavouriteViewModel  extends ViewModel {
 
 
     private void initData() {
+
         AppDatabase database = Room.databaseBuilder(mcontext, AppDatabase.class, "mydb")
                 .allowMainThreadQueries()
                 .build();
@@ -43,5 +44,7 @@ public class FavouriteViewModel  extends ViewModel {
         List<ItemUser> list = itemDAO.getItems();
         mListUserLiveData.postValue(list);
 //
+//        mListUser = list;
+//        mListUserLiveData.setValue(mListUser);
     }
 }

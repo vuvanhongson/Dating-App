@@ -1,4 +1,4 @@
-package com.example.tinder.home;
+package com.example.tinder.view.home;
 
 import android.content.Context;
 import android.util.Log;
@@ -10,22 +10,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.Observer;
 import androidx.room.Room;
 
 import com.bumptech.glide.Glide;
-import com.example.tinder.MainActivity;
 import com.example.tinder.R;
 import com.example.tinder.Room.AppDatabase;
 import com.example.tinder.Room.DAO.itemUserDAO;
 import com.example.tinder.Room.ItemUser;
-import com.example.tinder.data.model.Result;
-import com.example.tinder.data.model.User;
-import com.squareup.picasso.Picasso;
+import com.example.tinder.model.Result;
+import com.example.tinder.model.User;
 
-import java.net.CookieHandler;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,8 +27,9 @@ public class SwipeAdapter extends BaseAdapter {
 
     private static int number;
     private Context context;
-    private static List<Result> list;
+//    private static List<FeedHomeViewModel> list;
     ItemUser item = new ItemUser();
+    private static List<Result> list = new ArrayList<>();
 //    private MutableLiveData<Result> liveData;
 
 
@@ -95,7 +90,7 @@ public class SwipeAdapter extends BaseAdapter {
         } catch (Exception e) {
         }
 
-        CheckList(position, list);
+//        CheckList(position, list);
 
         number = position;
 
@@ -216,27 +211,6 @@ public class SwipeAdapter extends BaseAdapter {
         });
     }
 
-    private void CheckList(int position, List<Result> profile)
-    {
-//        List<Result> profile = new ArrayList<>();
-        if((list.size()) == position + 1)
-        {
-            HomeViewModel homeViewModel = new HomeViewModel();
-            homeViewModel.getLiveData().observe((LifecycleOwner) context, new Observer<Result>() {
-                @Override
-                public void onChanged(Result result) {
-                    Log.e("list", result.toString());
-                    profile.add(result);
-                    Log.d("profile1", profile.toString());
-                }
-
-
-            });
-            Log.e("size", String.valueOf(profile.size()));
-            this.list = profile;
-        }
-    }
-
     public static Result SwipeRight()
     {
         int point = number;
@@ -255,9 +229,20 @@ public class SwipeAdapter extends BaseAdapter {
         return 1;
     }
 
-    public void updateAnswers(List<Result> zlist) {
-        this.list = zlist;
-//        notifyDataSetChanged();
+    public void updateAnswers(Result zlist) {
+        list.add(zlist);
+        notifyDataSetChanged();
+    }
+
+    public void setItems(List<Result> items)
+    {
+        if (items == null)
+        {
+            return;
+        }
+
+        this.list = new ArrayList<>(items);
+        notifyDataSetChanged();
     }
 
 

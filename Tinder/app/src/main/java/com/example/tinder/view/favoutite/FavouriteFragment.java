@@ -1,32 +1,22 @@
-package com.example.tinder.favoutite;
+package com.example.tinder.view.favoutite;
 
 import android.os.Bundle;
 
-import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.room.Room;
 
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.tinder.R;
-import com.example.tinder.Room.AppDatabase;
-import com.example.tinder.Room.DAO.itemUserDAO;
 import com.example.tinder.Room.ItemUser;
-import com.example.tinder.data.model.User;
 import com.example.tinder.databinding.FragmentFavouriteBinding;
-import com.example.tinder.home.HomeFragment;
+import com.example.tinder.viewmodel.favourite.FavouriteViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Observable;
 
 
 public class FavouriteFragment extends Fragment {

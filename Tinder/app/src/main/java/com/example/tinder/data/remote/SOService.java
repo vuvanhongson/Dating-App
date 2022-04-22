@@ -1,10 +1,9 @@
 package com.example.tinder.data.remote;
 
-import com.example.tinder.data.model.SOProfileResponse;
+import com.example.tinder.model.Result;
+import com.example.tinder.model.SOProfileResponse;
 
-import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Headers;
 import rx.Observable;
 import rx.Single;
 

@@ -1,6 +1,5 @@
-package com.example.tinder.notification.screensonboarding;
+package com.example.tinder.view.notification.screensonboarding;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.tinder.R;
-import com.example.tinder.notification.NotificationFragment;
+import com.example.tinder.view.notification.NotificationFragment;
 
 
 public class OnBoardingFragment3 extends Fragment {
