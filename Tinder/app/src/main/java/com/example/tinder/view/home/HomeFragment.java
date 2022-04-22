@@ -100,8 +100,6 @@ public class HomeFragment extends Fragment{
     private void initSwipe()
     {
         loadAPIData();
-        loadAPIData();
-        loadAPIData();
         Log.d("profile3", "Profile size : " + profile.size());
 //        adapter = new SwipeAdapter(getContext(), profile);
 //        binding.koloda.setAdapter(adapter);

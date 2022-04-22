@@ -12,5 +12,5 @@ public interface SOService {
 //    @Headers("app_token: dCuW7UQMbdvpcBDfzolAOSGFIcAec11a")
     @GET("api/0.4/?randomapi")
 //    Call<SOProfileResponse> getProfile();
-    Single<SOProfileResponse> getProfile();
+    Observable<SOProfileResponse> getProfile();
 }

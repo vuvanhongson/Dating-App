@@ -22,7 +22,18 @@
     <color name="xanh3">#3CB371</color>
     <color name="xanh4">#2E8B57</color>
     <color name="xanh5">#66F5B0</color>
-    <color name="xanh6">#A8C277</color>
+    <color name="xanh6">#76a785</color>
+    <color name="xanh7">#A8C277</color>
+
+    <color name="tin1">#41989d</color>
+    <color name="tin2">#60b5a4</color>
+    <color name="tin3">#f3cda7</color>
+    <color name="tin4">#f37b84</color>
+    <color name="tin5">#eb5477</color>
+    <color name="tin6">#d15300</color>
+    <color name="tin7">#cf000f</color>
+    <color name="tin8">#c72b41</color>
+    <color name="tin9">#ee4540</color>
 
     <color name="trang">#ffffff</color>
 
